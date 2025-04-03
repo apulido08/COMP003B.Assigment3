@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Ttitle"] = "Event - Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model COMP003B.Assigment3.Models.EventRegistration
+
+<h2>Event Registration</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" />
+        <span asp-validation-for="FullName"></span>
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="EventCode"></label>
+        <input asp-for="EventCode" />
+    </div>
+    <div>
+        <label asp-for="Tickets"></label>
+        <input asp-for="Tickets" />
+        <span asp-validation-for="Tickets"></span>
+    </div>
+    <div>
+        <label asp-for="ReferralCode"></label>
+        <input asp-for="ReferralCode" />
+    </div>
+    <button type="submit">Register</button>
+    <partial name="_EventNav" />
+</form>
+

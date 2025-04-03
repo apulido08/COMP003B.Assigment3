@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Ttitle"] = "Event - Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model COMP003B.Assigment3.Models.EventRegistration
+
+<h2>Registration Successful</h2>
+<p>Thank you, @Model.FullName, for registering!</p>
+<p>Email: @Model.Email</p>
+<p>Event Code: @Model.EventCode</p>
+<p>Tickets: @Model.Tickets</p>
+
+@if (!string.IsNullOrEmpty(Model.ReferralCode))
+{
+    <p>Referral Code: @Model.ReferralCode</p>
+}
+
+<partial name="_EventNav" />
